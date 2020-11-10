@@ -19,6 +19,7 @@ For short-hand, we will use the following namespace prefixes here:
 @prefix    ldp: <http://www.w3.org/ns/ldp#> .
 @prefix    mee: <http://www.w3.org/ns/pim/meeting#> .
 @prefix    pim: <http://www.w3.org/ns/pim/space#> .
+@prefix     qu: <http://www.w3.org/2000/10/swap/pim/qif#>
 @prefix    rdf: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix   sioc: <http://rdfs.org/sioc/ns#> .

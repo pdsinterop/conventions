@@ -98,17 +98,19 @@ Example:
 Once both one-to-one inboxes exist and both counterparties know about them, they can send messages to each other.
 Each message is stored twice, once posted to the other person's one-to-one inbox, and once on the sender's own pod.
 
+### Chat message contents
 The contents of these messages could be anything, for instance a human-readable text, using the `sioc:content` predicate:
 
 ```turtle
 <#this> sioc:content "Hi, Bob!" .
 ```
 
+#### SNAP messages
 For now, the only known use of one-to-one chat is for [SNAP messages](https://github.com/ledgerloops/snap-solid/blob/ec7fc18/src/SnapContact.ts#L132-L150), example:
 ```turtle
 <#this>
   snap:transId 1;
-  snap:newState snap.Proposing ;
+  snap:newState snap:Proposing ;
   snap:amount 15 ;
   snap:condition "3ge44fgef34343734" ;
   snap:preimage "3ge44fgef34343734" ;
