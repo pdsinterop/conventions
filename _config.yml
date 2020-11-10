@@ -1,0 +1,46 @@
+---
+baseurl: /conventions
+description: Conventions around how apps and services store data on your personal data store
+repository: pdsinterop/conventions
+title: Conventions
+url: https://pdsinterop.org
+
+permalink: pretty
+remote_theme: Potherca/extend-the-docs@v0.3.0
+
+exclude:
+  - "bin/"
+  - "src/"
+  - "tests/"
+  - "Gemfile"
+  - "*.json"
+  - "*.lock"
+
+plugins:
+  - github-pages
+
+# Extend the Docs settings (see https://pother.ca/extend-the-docs/)
+nav:
+  cross_repository:
+    exclude:
+      - jekyll-theme
+      - pdsinterop.github.io
+    show_archived: true
+    show_homepage: false
+  exclude:
+    - /
+    - /404.html
+  favicon_ico : /favicon.ico
+  main_title:
+    link: '/'
+  recurse: true
+
+# Just the Docs settings (see https://pmarsceill.github.io/just-the-docs/docs/configuration/)
+aux_links:
+  "PDS Interop on GitHub":
+    - https://github.com/pdsinterop
+footer_content: Copyright © 2020 PDS Interop. Distributed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons (CC BY 4.0).</a>
+gh_edit_link: true
+gh_edit_repository: https://github.com/pdsinterop/conventions/
+logo: https://avatars3.githubusercontent.com/u/65920341
+search_enabled: true
