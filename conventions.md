@@ -48,6 +48,10 @@ See [chat](./chat.md)
 
 See [meeting](./meeting.md)
 
+## Finance
+
+See [finance](./finance.md)
+
 ## Schedulable Event
 
 // TODO
