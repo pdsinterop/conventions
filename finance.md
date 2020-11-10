@@ -22,7 +22,7 @@ a banana, then receiving the banana is one half-trade, and paying 1 dollar (whic
 event that may show up in your bank statements) is another.
 These look as follows:
 ```turtle
-@prefix halftrade: <https://ledgerloops.com/vocab/HalfTrade#>
+@prefix halftrade: <https://ledgerloops.com/vocab/halftrade#>
 <#d6e6bf16-759a-450d-92d9-02c109d97e34> a halftrade:HalfTrade ;
   dct:date  "2019-04-17T07:50:18Z"^^XML:dateTime ;
   halftrade:from <iban:CH93-0076-2011-6238-5295-7> ;
