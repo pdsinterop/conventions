@@ -32,21 +32,21 @@ For short-hand, we will use the following namespace prefixes here:
 One of the most important RDF documents on your pod is your profile, which is the document that people get when they dereference your webid. We'll look at that first. After that, we'll look at each of the tools that can be created with the databrowser's + button: Addressbook, Notepad, Chat, LongChat, Meeting, Event, Link, Document, Folder, and Source.
 
 ## Profile
-See [profile](./profile)
+See [profile](./profile.md)
 
 ## Address Book
 
-See [addressbook](./addressbook)
+See [addressbook](./addressbook.md)
 
 ## Notepad
-See [notepad](./notepad)
+See [notepad](./notepad.md)
 
 ## Chat
-See [chat](./chat)
+See [chat](./chat.md)
 
 ## Meeting
 
-See [meeting](./meeting)
+See [meeting](./meeting.md)
 
 ## Schedulable Event
 
