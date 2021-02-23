@@ -32,3 +32,12 @@ To indicate that addressbook `/address-book/index.ttl` has a group called "Colle
 </address-book/colleagues.ttl#this> a                   vcard:Group .
 </address-book/colleagues.ttl#this> vcard:fn            "Colleagues" .
 ```
+
+To indicate that `johnDoe.ttl#this` has a certain WebId's, [Solid OS uses](https://github.com/solid/contacts-pane/blob/v2.4.6/webidControl.js#L40-L42):
+```turtle
+</johnDoe.ttl#this>
+  vcard:url [ a vcard:WebID ; vcard:value <https://johndoe.com/#me> ] ;
+  vcard:url [ a vcard:WebID ; vcard:value <https://johndoe.org/#me> ] .
+```
+To deal with contacts whose WebID changes, add the new one, then remove the old one. Just like how you would deal with a contact who gets a new phone number, basically.
+
