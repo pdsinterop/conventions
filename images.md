@@ -28,10 +28,6 @@ An Image Gallery can be represented using `schema:ImageGallery`. Furthermore, th
 
 A Collection can be modeled through a `schema:Collection`, which can be linked to its Image Gallery resources through the `schema:hasPart` property.
 
-##### Person
-
-A Person can be modeled using a `schema:Person`.
-
 #### DCAT
 
 ##### Image
@@ -128,60 +124,3 @@ An Imgur image can be mapped to a `schema:ImageObject`, along with the following
 - An image resource can be modeled by a `dcat:Distribution`.
 - A Imgur Album can contain image resources, and can be modeled by `dcat:Dataset`.
 - An Imgur Gallery can contain Imgur Albums, which contain image resources. Therefore, an Imgur Gallery can be modeled by a `dcat:Catalog` which can be linked to **zero or more** `dcat:Dataset`s (Albums).
-
-### Google People API
-
-Using the [Google People API](https://developers.google.com/people?hl=en) we can transfer our Google contacts.
-
-> Please note that this use case can be extended easily to [other Google Products](https://developers.google.com/products?hl=en).
-
-#### Using Schema.org
-
-A Google contact can be mapped to a `schema:Person`, along with the following properties:
-
-| Google contact resource | `schema:Person`          |
-| ----------------------- | ------------------------ |
-| `givenName`             | `schema:givenName`       |
-| `familyName`            | `schema:familyName`      |
-| `displayName`           | `schema:alternativeName` |
-
-
-
-[PROV4ITDaTa-demo-HTML]: https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/WWW21COMPANION/136/7b7ad165-8c01-11eb-8d84-166a08e17233/OUT/www21companion-136.html
-[PROV4IDaTa-demo-pdf]: https://biblio.ugent.be/publication/8704820/file/8704821.pdf
-
-[RML-mapping]: #rml-mapping-documents
-[provenance]: #automatic-data-provenance-generation
-
-[Comunica]: https://comunica.dev/
-[DCAT]: https://www.w3.org/TR/vocab-dcat-2/
-[DTP]: https://datatransferproject.dev/
-[FAIR]: https://www.go-fair.org/
-[Flickr]: https://www.flickr.com/about
-[Flickr-API]: https://www.flickr.com/services/developer/api/
-[HTTPS]: https://www.ietf.org/rfc/rfc2818.txt
-[Google People API]: https://developers.google.com/people?hl=en
-[Imgur]: https://imgur.com/
-[Imgur-API]: https://apidocs.imgur.com/
-[KGC]: https://www.knowledgegraph.tech/
-[KGC-PDF]: assets/presentation-kgc2021.pdf
-[KGC-VIDEO]: https://knowledgegraphconference.vhx.tv/packages/kgc-21-attendees/videos/ben-de-meester-prov4itdata-flexible-knowledge-graph-generation-within-reach
-[LDP]: https://www.w3.org/TR/ldp/
-[OAuth]: https://oauth.net/
-[OAuth1.0a]: https://oauth.net/core/1.0a/
-[OpenIDConnect]: https://openid.net/connect/
-[PIMS]: https://edps.europa.eu/data-protection/our-work/subjects/personal-information-management-system_en
-[PROV-O]: https://www.w3.org/TR/prov-o/
-[RDF]: https://www.w3.org/TR/rdf-concepts/
-[REST]: https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
-[R2RML]: https://www.w3.org/TR/r2rml/
-[RML.io]: https://rml.io
-[RML-spec]: http://rml.io/spec.html
-[RMLMapper-JAVA]: https://github.com/RMLio/rmlmapper-java
-[RMLMapper-api]: https://github.com/RMLio/rmlmapper-webapi-js
-[Schema.org]: https://schema.org/docs/full.html
-[Solid]: https://inrupt.com/solid/
-[Turtle]: https://www.w3.org/TR/turtle/
-[WWW2021]: https://www2021.thewebconf.org/
-[WWW2021-PDF]: assets/presentation-www2021.pdf
-[WWW2021-VIDEO]: https://youtu.be/vwobfnAuxf0
