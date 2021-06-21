@@ -1,4 +1,4 @@
-# Data Conventions
+# Overview
 _NB: this currently mainly describes how Solid OS stores data on a Solid Pod._
 
 This document describes how apps and services store your data on your personal data store, for instance as triples in RDF documents on your Solid pod.
