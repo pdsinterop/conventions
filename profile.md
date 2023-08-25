@@ -19,6 +19,10 @@ Now say your name is "John Doe", then add these triples to your profile document
 </profile/card#me> a         foaf:Person .
 </profile/card#me> a         schema:Person .
 </profile/card#me> foaf:name "John Doe" .
+</profile/card#me> http://www.w3.org/2006/vcard/ns#organization-name "My Company" .
+</profile/card#me> http://www.w3.org/2006/vcard/ns#hasEmail "m@m.com" .
+</profile/card#me> http://www.w3.org/2006/vcard/ns#bday "1990-01-01T01:00:00" .
+</profile/card#me> http://www.w3.org/2006/vcard/ns#hasTelephone "+00 000 000 000" .
 ```
 
 ## Linking to your pod
