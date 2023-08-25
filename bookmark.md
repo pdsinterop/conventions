@@ -1,4 +1,5 @@
 # Bookmark
+_NB: take a  look at https://github.com/mark-book/markbook for more reference
 
 To create a new bookmark at `/bookmarks/index.ttl`, add the following triples into it:
 
