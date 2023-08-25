@@ -1,5 +1,4 @@
-# Notepad
-_NB: this currently mainly describes how Solid OS stores data on a Solid Pod._
+# Bookmark
 
 To create a new bookmark at `/bookmarks/index.ttl`, add the following triples into it:
 
