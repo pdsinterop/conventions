@@ -1,5 +1,6 @@
 # Bookmark
-_NB: take a  look at https://github.com/mark-book/markbook for more reference
+initially used by https://github.com/mark-book/markbook
+and now its used by https://github.com/pondersource/solidBookmarker
 
 To create a new bookmark at `/bookmarks/index.ttl`, add the following triples into it:
 
