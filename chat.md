@@ -1,5 +1,9 @@
 # Chat
-_NB: this currently mainly describes how Solid OS stores data on a Solid Pod._
+_NB1: this currently mainly describes how Solid OS stores data on a Solid Pod._
+
+_NB2: See the [client-client spec for chat](https://solid.github.io/chat/) which is more complete and more recent than this doc!_
+
+# Old convention description from before the [client-client spec for chat](https://solid.github.io/chat/) follows
 
 ## ShortChat
 To create a ShortChat conversation, create a document, e.g., `/chat.ttl`, and add the following triples to it:
