@@ -1,11 +1,15 @@
 # Bookmark
-initially used by https://github.com/mark-book/markbook
-and now its used by https://github.com/pondersource/solidBookmarker
 
-To create a new bookmark at `/bookmarks/index.ttl`, add the following triples into it:
+Used `https://github.com/jeff-zucker/linked-bookmarks` as reference
+
 
 ```turtle
-</bookmarks/index.ttl#this> a          http://www.w3.org/2002/01/bookmark#Bookmark .
-</bookmarks/index.ttl#this> http://purl.org/dc/terms/title   "google" .
-</bookmarks/index.ttl#this> http://www.w3.org/2002/01/bookmark#recalls   "https://www.google.com" .
+@prefix : <#> .
+@prefix bk: <http://www.w3.org/2002/01/bookmark#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+bk:hasTopic :fiction;
+a bk:BookMark;
+rdfs:label "Ancient Texts";
+bk:recalls <https://archive.org>
 ```
