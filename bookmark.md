@@ -40,3 +40,22 @@ There are two ways to link to the creator of a bookmark:
 Some apps add a unique identifier separate from the subject URI, like:
 * `<bookmark> <http://www.w3.org/2002/01/bookmark#id> "b93d9944-d54d-42f6-a39b-6ea3f9217763" .`
 * There is also the use of <http://purl.org/dc/terms/title#references> in [mark-book](https://github.com/mark-book/markbook/blob/123fadd211d9a42c43e2d9a5e7eeba81bb6b3fd6/bin/reddit.js#L32) but we're not entirely sure how that works.
+
+## [Webmarks](https://webmarks.5apps.com)
+
+Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestorage/module-bookmarks) writing to `/bookmarks/archive`:
+
+```
+{
+  "url": "https://www.google.com",
+  "title": "Google",
+  "description": "alfa",
+  "tags": [
+    "bravo"
+  ],
+  "createdAt": "2023-11-30T15:02:09.711Z",
+  "updatedAt": "2023-11-30T15:08:29.561Z",
+  "id": "a9308a39c5294b0b9269d0c650d8c5f1",
+  "@context": "http://remotestorage.io/spec/modules/bookmarks/archive-bookmark"
+}
+```
