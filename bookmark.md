@@ -36,7 +36,7 @@ There are two ways to link to the creator of a bookmark:
 * `<bookmark> <http://purl.org/dc/terms/creator> <https://michielbdejong.solidcommunity.net/profile/card#me> .`
 * `<bookmark> <http://xmlns.com/foaf/0.1/maker> <https://michielbdejong.solidcommunity.net/profile/card#me> .`
 
-# Primary Key (optional)
+## Primary Key (optional)
 Some apps add a unique identifier separate from the subject URI, like:
 * `<bookmark> <http://www.w3.org/2002/01/bookmark#id> "b93d9944-d54d-42f6-a39b-6ea3f9217763" .`
 * There is also the use of <http://purl.org/dc/terms/title#references> in [mark-book](https://github.com/mark-book/markbook/blob/123fadd211d9a42c43e2d9a5e7eeba81bb6b3fd6/bin/reddit.js#L32) but we're not entirely sure how that works.
