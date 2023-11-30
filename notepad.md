@@ -24,7 +24,7 @@ Now indicate that this is the last line, set this line's `pim:next` to the notep
 </notepad.ttl#line0> pim:next </notepad.ttl#this> .
 ```
 
-To add a line to the notepad, for instance 'first line', first update the content of the first line, by replacing
+To add a line to the notepad, for instance 'Alfa', first update the content of the first line, by replacing
 
 ```turtle
 </notepad.ttl#line0> dc:content "" .
@@ -33,10 +33,10 @@ To add a line to the notepad, for instance 'first line', first update the conten
 with
 
 ```turtle
-</notepad.ttl#line0> dc:content "first line" .
+</notepad.ttl#line0> dc:content "Alfa" .
 ```
 
-and then add a new participation-line below it, where the user can type their next line; pick a timestamp, for instance `1555488949899`, and add the following triples:
+and then add a new participation line below it, where the user can type their next line; pick a timestamp, for instance `1555488949899`, and add the following triples:
 
 ```turtle
 </notepad.ttl#this>            flow:participation </notepad.ttl#id1555488949899> .
@@ -70,7 +70,7 @@ Note that the first line still is the only line in the document, apart from the 
 
 ```turtle
 </notepad.ttl#line0> dc:author  </profile/card#me> .
-</notepad.ttl#line0> dc:content "first line" .
+</notepad.ttl#line0> dc:content "Alfa" .
 </notepad.ttl#line0> pim:next   :id1555489499814  .
 ```
 
@@ -78,6 +78,6 @@ Note that the first line still is the only line in the document, apart from the 
 
 ```turtle
 </notepad.ttl#id1555489499814> dc:author  </profile/card#me> .
-</notepad.ttl#id1555489499814> dc:content "second line" .
+</notepad.ttl#id1555489499814> dc:content "Bravo" .
 </notepad.ttl#id1555489499814> pim:next   </notepad.ttl#this> .
 ```
