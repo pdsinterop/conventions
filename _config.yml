@@ -46,5 +46,8 @@ aux_links:
 footer_content: '<p xmlns:dct="http://purl.org/dc/terms/" property="dct:rights">Copyright © <span property="dct:dateCopyrighted">2020-2021</span> <span property="dct:publisher">PDS Interop</span>. Distributed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons (CC BY 4.0).</a></p>'
 gh_edit_link: true
 gh_edit_repository: https://github.com/pdsinterop/conventions/
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_branch: "main" # the branch that your docs is served from
+gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
 logo: https://avatars3.githubusercontent.com/u/65920341
 search_enabled: true
