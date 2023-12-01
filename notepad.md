@@ -190,3 +190,15 @@ Uses [custom mobule](https://github.com/Laverna/laverna/blob/master/app/scripts/
   "@context": "http://remotestorage.io/spec/modules/laverna/notes"
 }
 ```
+
+# [Snowfall](https://snowfall.vercel.app)
+
+Uses [custom mobule](https://github.com/71/snowfall/blob/master/client/common/remoteStorage.ts) writing to `/snowfall/notes.yaml`:
+
+```
+notes:
+  - text: alfa
+    children:
+      - text: bravo
+  - text: delta
+```
