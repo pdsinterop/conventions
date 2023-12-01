@@ -97,3 +97,22 @@ Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/rem
   "@context": "http://remotestorage.io/spec/modules/documents/text"
 }
 ```
+
+# [Notes Together](https://notestogether.hominidsoftware.com)
+
+Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/RemoteNotes.js) (compatible with Litewrite) writing to `/documents/notes`:
+
+> [!NOTE]  
+> When editing data previously saved from Litewrite above, some of the non-content fields have been lost or changed.
+
+```
+{
+  "id": "2d8ce0cb-b640-461b-844c-c8663cc42537",
+  "content": "delta\n\nbravo",
+  "title": "delta\nbravo",
+  "date": "2023-12-01T13:14:05.792Z",
+  "isLocked": false,
+  "lastEdited": 1701436457428,
+  "@context": "http://remotestorage.io/spec/modules/documents/note"
+}
+```
