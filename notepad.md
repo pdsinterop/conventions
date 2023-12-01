@@ -129,3 +129,41 @@ Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/
   "@context": "http://remotestorage.io/spec/modules/documents/note"
 }
 ```
+
+# [Encryptic](https://app.encryptic.org)
+
+Uses [custom mobule](https://github.com/encryptic-team/encryptic/blob/master/src/scripts/components/sync/remotestorage/Module.js) writing to `/encryptic/$USERNAME/notes`:
+
+```
+{
+  "type": "notes",
+  "id": "094304e0-904e-11ee-9444-89ac1ca7ec37",
+  "encryptedData": "-----BEGIN PGP MESSAGE-----\r\nVersion: OpenPGP.js v4.4.7\r\nComment: https://openpgpjs.org\r\n\r\nwcBMA2zxuA9e0BM+AQf+NTE02XpYWuU8TOpTRn+wg5Qn7eHfoA/Pl6TqAiSf\r\n//glR84H5wiQv/JJuG2PXZ8wsy1M2S3Fnaqh8G74/iUdi73uOxb5kS38Qk5g\r\nzjzSKZHSWO28Sxj+Aqb7uPpCLMwv7HAu57zPsxhjnYoHUolqGAIduNWYP4eC\r\nycnV1MRXlZWzhsPlHOsHKw5AnUg7Dbvz4yrmbPteSxJWqWiFIXKTK8btjQmx\r\nhlDz3e9AZpOTZTEKkueJ5p+ykKkgal1PwIxBo4MxqJr4cIzTYAgSOAyX6kdS\r\nkTFLcq2G3jzO0sdgeyJPL5q7TMQ88JsGKQ9qeDJo9HY15R5mpYWZ4LBSzlpK\r\nYNLA0gGzFpfQ8sZ0m42hHARQADGyzl8k6wr/ZO6+Yfscwwrt44tP5HleM4kM\r\n+5+aLY5KX462Oa0iGG01PJCW3iilgInqQf8/wbbIwx99fWzZRJhpGEE1CTJH\r\naq7BTTBtwUAPhcJWb7seHD752CdS5m0IKl/aAMTHScN3SljBGnvczJhs3WUV\r\n60uRE/xxQz4uPdDNChP2DlCvD1Ith0fSTqtMmM/x1DiAoO3Fj6ehoqXxvLv6\r\nGYLdhDEBwl7YH2GhuK9OtIOmgSqdeQkI/b/Fvx4Oj+8nRyK5Zys5f5s3P3FB\r\n69wY8Z9sMUuCJa5jNqXr6Gazq8H8z3Rm2dPIxRZxJ+kzTr3Z+1uQQhGy7FNg\r\nf9EP33hNCQ4Tfo4VCq8og8bie7hsz730prIX01lrb/poK8JztyiHtYMb2jmh\r\nQiZb+4brIkQf2tSeR246iICKZwuoTE/9rx93vWbFoyGpThnPFTcKGE8hvKUE\r\nBX96elhY0tzg3bXUsuOHAZbDdIqE6Bb19L3wLs5qtUQqJGS6XxPEaDXONC9K\r\nSQ==\r\n=dyiO\r\n-----END PGP MESSAGE-----\r\n",
+  "taskAll": 0,
+  "taskCompleted": 0,
+  "created": 1701437532877,
+  "updated": 1701437563118,
+  "notebookId": "0",
+  "isFavorite": 0,
+  "trash": 0,
+  "files": [],
+  "sharedWith": [],
+  "sharedBy": "alfa",
+  "@context": "http://remotestorage.io/spec/modules/encryptic/notes"
+}
+```
+
+Also writes to `/encryptic/$USERNAME/tags`:
+
+```
+{
+  "type": "tags",
+  "id": "-1791806854596657849-774024691093389715-160062204918003686491529221860-287399026",
+  "encryptedData": "-----BEGIN PGP MESSAGE-----\r\nVersion: OpenPGP.js v4.4.7\r\nComment: https://openpgpjs.org\r\n\r\nwcBMA2zxuA9e0BM+AQf/Tu4Jox+vQxV2fAygzIdRQZXEvUNuBLvAY/jwhKld\r\nqua9P9kPkVm5a+OqNjFal46Ccgfw5aNbt3w4n8yPP5aPoBBHxPQd88Du9fxe\r\nTn/GkP8kG1SxtN9+rNAT1J/Gp9Mc+PtU5Ku7JB7FYRucWtvBh1pmUIvHRT3M\r\nhrFJQN3td3VYWEI1kjJ9pui2vAd03APEtWlp39X4PSQ038IWmnhnydX6ckLQ\r\nfYxY+JTQ9c+u4ukvIellTAaUH19GKSChevNydtfXd/3KJsf9cb1I8OEvoxPf\r\naSeU8gvRWjZIQvzgatgdMYEpVe87UDx671P/ZC1dAvuiv1nCiz6bayw158lj\r\ny9LAuAHp7b+3mIIe65YhUKhHdrHIHixda9/ZfwQwQGGWqWMtQ+9w4vOIvNiA\r\nS560M692Qc7bHdoifq/dUqDAjx6tHrh0Mz8LAj/obyRdBvqXMtGv6uxkbBkA\r\ns+zIPxTgi5Ak8iBTfZhUVlGAxNVDjiuYWyGPNNIeK7cVfiBVHTdaiH6+EBXc\r\n5t1jdwRZCtI2maa5MQTC8pQ0OFCclQkfFdvbDhywKLiWoDAdf+y1a0C5MdLA\r\naxTzoasQwPUvf4OvejtLnjVp2oxZFh4YF3TaZ+fjT+O8846c3kAcumVqDguN\r\nL5qJg5cD2OIykpTuYOie/3JB3FQQaJylDYYjPoiZkP5dlMj9mt1cxxhYG0aM\r\nLg6ciGzcht8JhTjqS7DqBe0vkX24jlRQdtGc8opgN3ksOpFIt+e9EBkanzdO\r\nx2hCQttpybznsPDpxDW3LT7zRzs7WN6Ch+H55skD7TjEIsn+zrYKfNV6ObUM\r\n594Bs6ADCfAdb2QKe1fgSViugFM=\r\n=AtF2\r\n-----END PGP MESSAGE-----\r\n",
+  "count": 0,
+  "trash": 0,
+  "created": 1701438016360,
+  "updated": 1701438016360,
+  "@context": "http://remotestorage.io/spec/modules/encryptic/tags"
+}
+```
