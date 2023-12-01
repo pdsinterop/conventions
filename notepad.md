@@ -84,7 +84,7 @@ Note that the first line still is the only line in the document, apart from the 
 
 # [Litewrite](https://litewrite.net)
 
-Uses [litewrite/remotestorage-module-documents](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/documents/notes`:
+Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/remotestorage-module-documents) writing to `/documents/notes`:
 
 ```
 {
