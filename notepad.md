@@ -202,3 +202,16 @@ notes:
       - text: bravo
   - text: delta
 ```
+
+# [Hyperdraft](https://hyperdraft.rosano.ca)
+
+Uses [custom mobule](https://github.com/rosano/hyperdraft/blob/master/os-app/_shared/KVCNote/main.js) writing to `/wikiavec/kvc_notes/$DAY/$ID/main`:
+
+```
+{
+  "KVCNoteBody": "alfa\n\nbravo",
+  "KVCNoteID": "01HGJV6VZAPPAZ7VBMJ7FCGY3P",
+  "KVCNoteCreationDate": "2023-12-01T14:06:05.802Z",
+  "KVCNoteModificationDate": "2023-12-01T14:06:08.182Z"
+}
+```
