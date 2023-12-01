@@ -102,8 +102,21 @@ Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/rem
 
 Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/RemoteNotes.js) (compatible with Litewrite) writing to `/documents/notes`:
 
+```
+{
+  "id": "2ff847fc-a687-467d-badc-1bf97f0969f8",
+  "content": "<ol><li><input type=\"checkbox\" />echo</li></ol><p></p>",
+  "title": "• echo",
+  "date": "2023-12-01T13:19:16.734Z",
+  "mimeType": "text/html;hint=SEMANTIC",
+  "isLocked": false,
+  "lastEdited": 1701436763996,
+  "@context": "http://remotestorage.io/spec/modules/documents/note"
+}
+```
+
 > [!NOTE]  
-> When editing data previously saved from Litewrite above, some of the non-content fields have been lost or changed.
+> When editing data saved from Litewrite in the previous section, some of the non-content fields have been lost or changed.
 
 ```
 {
