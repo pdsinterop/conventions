@@ -43,7 +43,7 @@ Some apps add a unique identifier separate from the subject URI, like:
 
 ## [Webmarks](https://webmarks.5apps.com)
 
-Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestorage/module-bookmarks) writing to `/bookmarks/archive`:
+Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestorage/module-bookmarks) writing to `/bookmarks/archive/`:
 
 ```
 {
@@ -62,7 +62,7 @@ Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestor
 
 ## [Joybox](https://joybox.rosano.ca)
 
-Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/joybox/jbx_documents`:
+Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/joybox/jbx_documents/`:
 
 ```
 {
@@ -83,7 +83,7 @@ Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared
 > [!NOTE]  
 > Data stored is encrypted; module is direct REST calls; perhaps extension owns the data and remoteStorage considered a form of 'backup'.
 
-Uses [custom module](https://gitlab.com/zookatron/bookmarkvault/-/blob/master/src/background/remotestorage.ts) writing to `/bookmarkvault`:
+Uses [custom module](https://gitlab.com/zookatron/bookmarkvault/-/blob/master/src/background/remotestorage.ts) writing to `/bookmarkvault/`:
 
 ```
 {
