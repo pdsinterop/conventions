@@ -81,3 +81,17 @@ Note that the first line still is the only line in the document, apart from the 
 </notepad.ttl#id1555489499814> dc:content "second line" .
 </notepad.ttl#id1555489499814> pim:next   </notepad.ttl#this> .
 ```
+
+# [Litewrite](https://litewrite.net)
+
+Uses [litewrite/remotestorage-module-documents](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/documents/notes`:
+
+{
+  "title": "alfa",
+  "content": "alfa\n\nbravo",
+  "lastEdited": 1701435915451,
+  "public": null,
+  "cursorPos": 11,
+  "id": "2d8ce0cb-b640-461b-844c-c8663cc42537",
+  "@context": "http://remotestorage.io/spec/modules/documents/text"
+}
