@@ -84,7 +84,7 @@ Note that the first line still is the only line in the document, apart from the 
 
 # [Litewrite](https://litewrite.net)
 
-Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/remotestorage-module-documents) writing to `/documents/notes`:
+Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/remotestorage-module-documents) writing to `/documents/notes/`:
 
 ```
 {
@@ -100,7 +100,7 @@ Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/rem
 
 # [Notes Together](https://notestogether.hominidsoftware.com)
 
-Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/RemoteNotes.js) (compatible with Litewrite) writing to `/documents/notes`:
+Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/RemoteNotes.js) (compatible with Litewrite) writing to `/documents/notes/`:
 
 ```
 {
@@ -132,7 +132,7 @@ Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/
 
 # [Encryptic](https://app.encryptic.org)
 
-Uses [custom mobule](https://github.com/encryptic-team/encryptic/blob/master/src/scripts/components/sync/remotestorage/Module.js) writing to `/encryptic/$USERNAME/notes`:
+Uses [custom mobule](https://github.com/encryptic-team/encryptic/blob/master/src/scripts/components/sync/remotestorage/Module.js) writing to `/encryptic/$USERNAME/notes/`:
 
 ```
 {
@@ -153,7 +153,7 @@ Uses [custom mobule](https://github.com/encryptic-team/encryptic/blob/master/src
 }
 ```
 
-Also writes to `/encryptic/$USERNAME/tags`:
+Also writes to `/encryptic/$USERNAME/tags/`:
 
 ```
 {
@@ -170,7 +170,7 @@ Also writes to `/encryptic/$USERNAME/tags`:
 
 # [Laverna](https://laverna.cc)
 
-Uses [custom mobule](https://github.com/Laverna/laverna/blob/master/app/scripts/modules/remotestorage/module.js) writing to `/laverna/notes-db/notes`:
+Uses [custom mobule](https://github.com/Laverna/laverna/blob/master/app/scripts/modules/remotestorage/module.js) writing to `/laverna/notes-db/notes/`:
 
 ```
 {
