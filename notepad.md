@@ -167,3 +167,26 @@ Also writes to `/encryptic/$USERNAME/tags`:
   "@context": "http://remotestorage.io/spec/modules/encryptic/tags"
 }
 ```
+
+# [Laverna](https://laverna.cc)
+
+Uses [custom mobule](https://github.com/Laverna/laverna/blob/master/app/scripts/modules/remotestorage/module.js) writing to `/laverna/notes-db/notes`:
+
+```
+{
+  "type": "notes",
+  "id": "6029d6ad-4b94-0bc4-682e-951c42f3acba",
+  "title": "alfa",
+  "content": "bravo",
+  "taskAll": 0,
+  "taskCompleted": 0,
+  "created": 1701438444239,
+  "updated": 1701438445120,
+  "notebookId": "0",
+  "tags": [],
+  "isFavorite": 0,
+  "trash": 0,
+  "files": [],
+  "@context": "http://remotestorage.io/spec/modules/laverna/notes"
+}
+```
