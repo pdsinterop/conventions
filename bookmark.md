@@ -62,7 +62,7 @@ Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestor
 
 ## [Joybox](https://joybox.rosano.ca)
 
-Uses a [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/joybox/jbx_documents`:
+Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/joybox/jbx_documents`:
 
 ```
 {
