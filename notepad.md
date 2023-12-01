@@ -86,6 +86,7 @@ Note that the first line still is the only line in the document, apart from the 
 
 Uses [litewrite/remotestorage-module-documents](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/documents/notes`:
 
+```
 {
   "title": "alfa",
   "content": "alfa\n\nbravo",
@@ -95,3 +96,4 @@ Uses [litewrite/remotestorage-module-documents](https://github.com/rosano/joybox
   "id": "2d8ce0cb-b640-461b-844c-c8663cc42537",
   "@context": "http://remotestorage.io/spec/modules/documents/text"
 }
+```
