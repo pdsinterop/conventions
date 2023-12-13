@@ -86,7 +86,7 @@ Note that the first line still is the only line in the document, apart from the 
 
 Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/remotestorage-module-documents) writing to `/documents/notes/`:
 
-```
+```json
 {
   "title": "alfa",
   "content": "alfa\n\nbravo",
@@ -102,7 +102,7 @@ Uses [litewrite/remotestorage-module-documents](https://github.com/litewrite/rem
 
 Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/RemoteNotes.js) (compatible with Litewrite) writing to `/documents/notes/`:
 
-```
+```json
 {
   "id": "2ff847fc-a687-467d-badc-1bf97f0969f8",
   "content": "<ol><li><input type=\"checkbox\" />echo</li></ol><p></p>",
@@ -118,7 +118,7 @@ Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/
 > [!NOTE]  
 > When editing data saved from Litewrite in the previous section, some of the non-content fields have been lost or changed.
 
-```
+```json
 {
   "id": "2d8ce0cb-b640-461b-844c-c8663cc42537",
   "content": "delta\n\nbravo",
@@ -134,7 +134,7 @@ Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/
 
 Uses [custom module](https://github.com/encryptic-team/encryptic/blob/master/src/scripts/components/sync/remotestorage/Module.js) writing to `/encryptic/$USERNAME/notes/`:
 
-```
+```json
 {
   "type": "notes",
   "id": "094304e0-904e-11ee-9444-89ac1ca7ec37",
@@ -155,7 +155,7 @@ Uses [custom module](https://github.com/encryptic-team/encryptic/blob/master/src
 
 Also writes to `/encryptic/$USERNAME/tags/`:
 
-```
+```json
 {
   "type": "tags",
   "id": "-1791806854596657849-774024691093389715-160062204918003686491529221860-287399026",
@@ -172,7 +172,7 @@ Also writes to `/encryptic/$USERNAME/tags/`:
 
 Uses [custom module](https://github.com/Laverna/laverna/blob/master/app/scripts/modules/remotestorage/module.js) writing to `/laverna/notes-db/notes/`:
 
-```
+```json
 {
   "type": "notes",
   "id": "6029d6ad-4b94-0bc4-682e-951c42f3acba",
@@ -195,7 +195,7 @@ Uses [custom module](https://github.com/Laverna/laverna/blob/master/app/scripts/
 
 Uses [custom module](https://github.com/71/snowfall/blob/master/client/common/remoteStorage.ts) writing to `/snowfall/notes.yaml`:
 
-```
+```json
 notes:
   - text: alfa
     children:
@@ -207,7 +207,7 @@ notes:
 
 Uses [custom module](https://github.com/rosano/hyperdraft/blob/master/os-app/_shared/KVCNote/main.js) writing to `/wikiavec/kvc_notes/$DAY/$ID/main`:
 
-```
+```json
 {
   "KVCNoteBody": "alfa\n\nbravo",
   "KVCNoteID": "01HGJV6VZAPPAZ7VBMJ7FCGY3P",

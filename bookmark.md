@@ -45,7 +45,7 @@ Some apps add a unique identifier separate from the subject URI, like:
 
 Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestorage/module-bookmarks) writing to `/bookmarks/archive/`:
 
-```
+```json
 {
   "url": "https://www.google.com",
   "title": "Google",
@@ -64,7 +64,7 @@ Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestor
 
 Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/joybox/jbx_documents/`:
 
-```
+```json
 {
   "JBXDocumentNotes": "",
   "JBXDocumentURL": "https://alsarahthenubatones.bandcamp.com/album/silt",
@@ -85,7 +85,7 @@ Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared
 
 Uses [custom module](https://gitlab.com/zookatron/bookmarkvault/-/blob/master/src/background/remotestorage.ts) writing to `/bookmarkvault/`:
 
-```
+```json
 {
   "version": "0.1.2",
   "passphraseHash": "pbkdf2:Z7GnrZdSIQnuQokSQaVEAQ==:hwxlDGlGPwdc7jt1m+384dr3YK7JM8EFX1y3/lblqR4=",
