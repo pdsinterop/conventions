@@ -66,18 +66,18 @@ Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared
 
 ```json
 {
-  "JBXDocumentNotes": "",
   "JBXDocumentURL": "https://alsarahthenubatones.bandcamp.com/album/silt",
   "JBXDocumentName": "Alsarah & the Nubatones: Silt",
+  "JBXDocumentNotes": "",
   "JBXDocumentTags": [
     "#listen"
   ],
+  "JBXDocumentCreationDate": "2023-11-30T15:26:46.811Z",
+  "JBXDocumentModificationDate": "2023-11-30T15:26:46.811Z",
+  "JBXDocumentID": "01HGGDDWGV1A9KFYMNWKFY63ZP",
   "JBXDocumentEmbedURL": "https://bandcamp.com/EmbeddedPlayer/v=2/album=704487352/size=large/tracklist=false/artwork=small/",
   "JBXDocumentImageURL": "https://f4.bcbits.com/img/a3732065656_5.jpg",
-  "JBXDocumentDidFetch": true,
-  "JBXDocumentID": "01HGGDDWGV1A9KFYMNWKFY63ZP",
-  "JBXDocumentCreationDate": "2023-11-30T15:26:46.811Z",
-  "JBXDocumentModificationDate": "2023-11-30T15:26:46.811Z"
+  "JBXDocumentDidFetch": true
 }
 ```
 
