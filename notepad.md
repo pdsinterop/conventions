@@ -132,7 +132,7 @@ Uses [custom module](https://github.com/DougReeder/notes-together/blob/main/src/
 
 # [Encryptic](https://app.encryptic.org)
 
-Uses [custom mobule](https://github.com/encryptic-team/encryptic/blob/master/src/scripts/components/sync/remotestorage/Module.js) writing to `/encryptic/$USERNAME/notes/`:
+Uses [custom module](https://github.com/encryptic-team/encryptic/blob/master/src/scripts/components/sync/remotestorage/Module.js) writing to `/encryptic/$USERNAME/notes/`:
 
 ```
 {
@@ -170,7 +170,7 @@ Also writes to `/encryptic/$USERNAME/tags/`:
 
 # [Laverna](https://laverna.cc)
 
-Uses [custom mobule](https://github.com/Laverna/laverna/blob/master/app/scripts/modules/remotestorage/module.js) writing to `/laverna/notes-db/notes/`:
+Uses [custom module](https://github.com/Laverna/laverna/blob/master/app/scripts/modules/remotestorage/module.js) writing to `/laverna/notes-db/notes/`:
 
 ```
 {
@@ -193,7 +193,7 @@ Uses [custom mobule](https://github.com/Laverna/laverna/blob/master/app/scripts/
 
 # [Snowfall](https://snowfall.vercel.app)
 
-Uses [custom mobule](https://github.com/71/snowfall/blob/master/client/common/remoteStorage.ts) writing to `/snowfall/notes.yaml`:
+Uses [custom module](https://github.com/71/snowfall/blob/master/client/common/remoteStorage.ts) writing to `/snowfall/notes.yaml`:
 
 ```
 notes:
@@ -205,7 +205,7 @@ notes:
 
 # [Hyperdraft](https://hyperdraft.rosano.ca)
 
-Uses [custom mobule](https://github.com/rosano/hyperdraft/blob/master/os-app/_shared/KVCNote/main.js) writing to `/wikiavec/kvc_notes/$DAY/$ID/main`:
+Uses [custom module](https://github.com/rosano/hyperdraft/blob/master/os-app/_shared/KVCNote/main.js) writing to `/wikiavec/kvc_notes/$DAY/$ID/main`:
 
 ```
 {
