@@ -218,6 +218,9 @@ Uses [custom mobule](https://github.com/rosano/hyperdraft/blob/master/os-app/_sh
 
 # [Notepod](https://notepod.vincenttunru.com)
 
+> [!NOTE]  
+> Requests root access.
+
 Uses [custom mobule](https://gitlab.com/vincenttunru/notepod/-/blob/master/src/services/addNote.ts?ref_type=heads) writing to `/$ID.ttl`:
 
 ```turtle
@@ -232,5 +235,8 @@ Uses [custom mobule](https://gitlab.com/vincenttunru/notepod/-/blob/master/src/s
 ```
 
 # [dokieli](https://dokie.li)
+
+> [!NOTE]  
+> Requests root access.
 
 Uses files writing to `/$ID`.
