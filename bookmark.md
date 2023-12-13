@@ -91,4 +91,25 @@ Uses [custom module](https://gitlab.com/zookatron/bookmarkvault/-/blob/master/sr
   "passphraseHash": "pbkdf2:Z7GnrZdSIQnuQokSQaVEAQ==:hwxlDGlGPwdc7jt1m+384dr3YK7JM8EFX1y3/lblqR4=",
   "data": "aes:yv5f7hFd2V0r51MyfcuO0Q==:EX4AWldZiwxBL2ZZONYZYwxAmA0Runl2pYXvH3l6m64wJrPiiM9oZp1F24njtBZ5A6TOk1iBhcIvyp2RsOSWoOMJ5oryjPG6fJfjxnzwr3atNRxUoQYOlU2cxaVlqSDgFc3oxSTz2beIyhCI5pCknL3vlEwdjpSIgKejlsNVo6+G6tKJKV2cbZ9IXy32bumfHBX6j/i6xHQpa7/NhxXbxA=="
 }
+
+## [poddit](https://vincenttunru.gitlab.io/poddit)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module](https://gitlab.com/vincenttunru/poddit/-/blob/master/src/store/storeBookmark.ts) writing to `/public/poddit.ttl`:
+
+```turtle
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix bookm: <http://www.w3.org/2002/01/bookmark#>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+
+<> terms:references <#0.716493818605209.ttl>.
+
+<#0.716493818605209.ttl>
+    a bookm:Bookmark;
+    terms:created "2023-12-13T10:11:12.842Z"^^XML:dateTime;
+    terms:title "alfa";
+    bookm:recalls "https://google.com".
 ```
