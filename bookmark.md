@@ -113,3 +113,15 @@ Uses [custom module](https://gitlab.com/vincenttunru/poddit/-/blob/master/src/st
     terms:title "alfa";
     bookm:recalls "https://google.com".
 ```
+
+## [Solid Bookmarks](https://bookmarks.pondersource.net)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module?](https://github.com/pondersource/solidBookmarker/blob/main/src/utils/index.ts#L9) writing to `/bookmarks/index.ttl`:
+
+```turtle
+:c13dbe2e-a0fe-48d0-a7d7-22a87b86a1f4
+a bookm:Bookmark; dct:title "alfa"; bookm:recalls "https://www.google.com".
+```
