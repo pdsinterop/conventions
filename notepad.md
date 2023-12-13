@@ -230,3 +230,7 @@ Uses [custom mobule](https://gitlab.com/vincenttunru/notepod/-/blob/master/src/s
     schema:dateCreated "2023-12-13T08:53:50Z"^^xsd:dateTime;
     schema:text "alfa\nbravo".
 ```
+
+# [dokieli](https://dokie.li)
+
+Uses files writing to `/$ID`.
