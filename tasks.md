@@ -12,3 +12,38 @@ a schema:Action ;
 schema:actionStatus schema:PotentialActionStatus ;
 schema:description "alfa" .
 ```
+
+# Tasks
+
+## [Do Again List](http://static.karl.berlin/doagain)
+
+Uses [custom module](https://github.com/karlb/doagain/blob/master/remotestorage-doagain.js) writing to `/doagain/`:
+
+```json
+{
+  "entries": [
+    {
+      "description": "bravo",
+      "completed": false,
+      "editing": false,
+      "id": 1,
+      "doneAt": [],
+      "tags": []
+    },
+    {
+      "description": "alfa",
+      "completed": false,
+      "editing": false,
+      "id": 2,
+      "doneAt": [],
+      "tags": [
+        "charlie"
+      ]
+    }
+  ],
+  "field": "",
+  "uid": 3,
+  "visibility": "charlie",
+  "@context": "http://remotestorage.io/spec/modules/doagain/doagain-store"
+}
+```
