@@ -120,3 +120,18 @@ For now, the only known use of one-to-one chat is for [SNAP messages](https://gi
   snap:preimage "3ge44fgef34343734" ;
   snap:expiresAt "2019-04-17T07:50:18Z"^^XML:dateTime .
   ```
+
+## [Liqid Chat](https://liqid.chat)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module?](https://github.com/o-development/ochat-client/tree/master/src/chat) writing to `/chats/`:
+
+```turtle
+:dd5e723f-7a61-4b59-9d51-70cf804e71fc
+    dct:created "2023-12-14T13:29:16.759Z"^^xsd:dateTime;
+    sioc:content "hello!";
+    foaf:maker c:me;
+    terms:liqidChatSignedCredential
+```
