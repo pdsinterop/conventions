@@ -30,36 +30,9 @@ For short-hand, we will use the following namespace prefixes here:
 @prefix    xsd: <http://www.w3.org/2001/XMLSchema#> .
 ```
 
-One of the most important RDF documents on your pod is your profile, which is the document that people get when they dereference your webid. We'll look at that first. After that, we'll look at each of the tools that can be created with the databrowser's + button: Addressbook, Notepad, Chat, LongChat, Meeting, Event, Link, Document, Folder, and Source.
+One of the most important RDF documents on your pod is your [profile](./profile.md), which is the document that people get when they dereference your webid. 
 
-## Profile
-See [profile](./profile.md)
-
-## Address Book
-
-See [addressbook](./addressbook.md)
-
-## Notepad
-See [notepad](./notepad.md)
-
-## Chat
-See [chat](./chat.md)
-
-## Meeting
-
-See [meeting](./meeting.md)
-
-## Finance
-
-See [finance](./finance.md)
-
-## Schedulable Event
-
-// TODO
-
-## Link
-
-// TODO
+After that, we'll look at each of the tools that can be created with the databrowser's + button: [Address Book](./addressbook.md), [Notepad](./notepad.md), [Chat](./chat.md), LongChat, [Meeting](./meeting.md), [Finance](./finance.md), Event, Link, Document, Folder, and Source.
 
 ## Dokieli Document
 
