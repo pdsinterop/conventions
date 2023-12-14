@@ -131,7 +131,7 @@ a bookm:Bookmark; dct:title "alfa"; bookm:recalls "https://www.google.com".
 > [!NOTE]  
 > Requests root access
 
-Uses [custom module?](https://github.com/RRustom/solid-rss/blob/main/src/helpers/addArticle.js) writing to `/$ID.ttl`:
+Uses [custom module](https://github.com/RRustom/solid-rss/blob/main/src/helpers/addArticle.js) writing to `/$ID.ttl`:
 
 ```turtle
 :17025573933468186660586698863
