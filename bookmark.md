@@ -126,6 +126,22 @@ Uses [custom module?](https://github.com/pondersource/solidBookmarker/blob/main/
 a bookm:Bookmark; dct:title "alfa"; bookm:recalls "https://www.google.com".
 ```
 
+## [Booklice](https://scenaristeur.github.io/booklice/)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module](https://github.com/scenaristeur/booklice/blob/main/src/store/modules/solid.js) writing to `/public/bookmarks/`:
+
+```turtle
+<#1702557925503> a <https://www.w3.org/ns/activitystreams#Note>;
+    <https://www.w3.org/ns/activitystreams#name> "bravo";
+    <https://www.w3.org/ns/activitystreams#content> "";
+    <https://www.w3.org/ns/activitystreams#url> <https://www.google.com>;
+    <https://www.w3.org/ns/activitystreams#actor> <https://rosano.solidcommunity.net/profile/card#me>;
+    <https://www.w3.org/ns/activitystreams#published> "2023-12-14T12:45:25.503Z".
+```
+
 ## [solid-rss](https://rrustom.github.io/solid-rss/)
 
 > [!NOTE]  
