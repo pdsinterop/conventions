@@ -17,7 +17,7 @@ schema:description "alfa" .
 
 ## [Do Again List](http://static.karl.berlin/doagain)
 
-Uses [custom module](https://github.com/karlb/doagain/blob/master/remotestorage-doagain.js) writing to `/doagain/`:
+Uses [custom module](https://github.com/karlb/doagain/blob/master/remotestorage-doagain.js) writing to `/doagain/doagain.json`:
 
 ```json
 {
