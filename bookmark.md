@@ -125,3 +125,19 @@ Uses [custom module?](https://github.com/pondersource/solidBookmarker/blob/main/
 :c13dbe2e-a0fe-48d0-a7d7-22a87b86a1f4
 a bookm:Bookmark; dct:title "alfa"; bookm:recalls "https://www.google.com".
 ```
+
+## [solid-rss](https://rrustom.github.io/solid-rss/)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module?](https://github.com/RRustom/solid-rss/blob/main/src/helpers/addArticle.js) writing to `/$ID.ttl`:
+
+```turtle
+:17025573933468186660586698863
+    a schema:WebPage;
+    schema:name "Should you add screenshots to documentation?";
+    schema:url
+    "https://thisisimportant.net/posts/screenshots-in-documentation/".
+```
+
