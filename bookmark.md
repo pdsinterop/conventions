@@ -114,6 +114,15 @@ Uses [custom module](https://gitlab.com/vincenttunru/poddit/-/blob/master/src/st
     bookm:recalls "https://google.com".
 ```
 
+and to `/settings/publicTypeIndex.ttl`:
+
+```turtle
+:poddit
+    a solid:TypeRegistration;
+    solid:forClass bookm:Bookmark;
+    solid:instance </public/poddit.ttl>.
+```
+
 ## [Solid Bookmarks](https://bookmarks.pondersource.net)
 
 > [!NOTE]  
