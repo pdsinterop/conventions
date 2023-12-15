@@ -215,3 +215,41 @@ Uses [custom module](https://github.com/rosano/hyperdraft/blob/master/os-app/_sh
   "KVCNoteID": "01HGJV6VZAPPAZ7VBMJ7FCGY3P"
 }
 ```
+
+# [Notepod](https://notepod.vincenttunru.com)
+
+> [!NOTE]  
+> Requests root access.
+
+Uses [custom mobule](https://gitlab.com/vincenttunru/notepod/-/blob/master/src/services/addNote.ts?ref_type=heads) writing to `/$ID.ttl`:
+
+```turtle
+@prefix : </1e16eda0-9995-11ee-8100-2bec63e97603.ttl#>.
+@prefix schema: <http://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+:17024576300408220454257988783
+    a schema:TextDigitalDocument;
+    schema:dateCreated "2023-12-13T08:53:50Z"^^xsd:dateTime;
+    schema:text "alfa\nbravo".
+```
+
+and to `/settings/publicTypeIndex.ttl`:
+
+```turtle
+@prefix : </1e16eda0-9995-11ee-8100-2bec63e97603.ttl#>.
+@prefix schema: <http://schema.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+:17024576300408220454257988783
+    a schema:TextDigitalDocument;
+    schema:dateCreated "2023-12-13T08:53:50Z"^^xsd:dateTime;
+    schema:text "alfa\nbravo".
+```
+
+# [dokieli](https://dokie.li)
+
+> [!NOTE]  
+> Requests root access.
+
+Uses files writing to `/$ID`.
