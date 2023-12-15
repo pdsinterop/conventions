@@ -166,3 +166,16 @@ Uses [custom module](https://github.com/RRustom/solid-rss/blob/main/src/helpers/
     "https://thisisimportant.net/posts/screenshots-in-documentation/".
 ```
 
+and to `/settings/publicTypeIndex.ttl`:
+
+```turtle
+:17025569190558494973613527352
+    a solid:TypeRegistration;
+    solid:forClass schema:DataFeed;
+    solid:instance </503d4940-9a7c-11ee-8100-2bec63e97603.ttl>.
+    
+:170255691905621628230877571053
+    a solid:TypeRegistration;
+    solid:forClass schema:WebPage;
+    solid:instance </50425250-9a7c-11ee-8100-2bec63e97603.ttl>.
+```
