@@ -100,4 +100,15 @@ A Google contact can be mapped to a `schema:Person`, along with the following pr
 [WWW2021]: https://www2021.thewebconf.org/
 [WWW2021-PDF]: assets/presentation-www2021.pdf
 [WWW2021-VIDEO]: https://youtu.be/vwobfnAuxf0
+```
 
+## [Add a friend on Solid](https://taisukef.github.io/solid-addfriend/)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module](https://github.com/taisukef/solid-addfriend/blob/master/scripts/main.js) writing to `/profile/card`:
+
+```turtle
+@prefix c: <https://taisukef.solid.community/profile/card#>.
+```
