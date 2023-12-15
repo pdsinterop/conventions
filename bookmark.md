@@ -45,7 +45,7 @@ Some apps add a unique identifier separate from the subject URI, like:
 
 Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestorage/module-bookmarks) writing to `/bookmarks/archive/`:
 
-```
+```json
 {
   "url": "https://www.google.com",
   "title": "Google",
@@ -64,17 +64,20 @@ Uses [@remotestorage/module-bookmarks](https://www.npmjs.com/package/@remotestor
 
 Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared/JBXDocument/main.js) writing to `/joybox/jbx_documents/`:
 
-```
+```json
 {
-  "JBXDocumentNotes": "",
   "JBXDocumentURL": "https://alsarahthenubatones.bandcamp.com/album/silt",
   "JBXDocumentName": "Alsarah & the Nubatones: Silt",
+  "JBXDocumentNotes": "",
+  "JBXDocumentTags": [
+    "#listen"
+  ],
+  "JBXDocumentCreationDate": "2023-11-30T15:26:46.811Z",
+  "JBXDocumentModificationDate": "2023-11-30T15:26:46.811Z",
+  "JBXDocumentID": "01HGGDDWGV1A9KFYMNWKFY63ZP",
   "JBXDocumentEmbedURL": "https://bandcamp.com/EmbeddedPlayer/v=2/album=704487352/size=large/tracklist=false/artwork=small/",
   "JBXDocumentImageURL": "https://f4.bcbits.com/img/a3732065656_5.jpg",
-  "JBXDocumentDidFetch": true,
-  "JBXDocumentID": "01HGGDDWGV1A9KFYMNWKFY63ZP",
-  "JBXDocumentCreationDate": "2023-11-30T15:26:46.811Z",
-  "JBXDocumentModificationDate": "2023-11-30T15:26:46.811Z"
+  "JBXDocumentDidFetch": true
 }
 ```
 
@@ -85,7 +88,7 @@ Uses [custom module](https://github.com/rosano/joybox/blob/master/os-app/_shared
 
 Uses [custom module](https://gitlab.com/zookatron/bookmarkvault/-/blob/master/src/background/remotestorage.ts) writing to `/bookmarkvault/`:
 
-```
+```json
 {
   "version": "0.1.2",
   "passphraseHash": "pbkdf2:Z7GnrZdSIQnuQokSQaVEAQ==:hwxlDGlGPwdc7jt1m+384dr3YK7JM8EFX1y3/lblqR4=",
