@@ -94,4 +94,91 @@ Uses [custom module](https://gitlab.com/zookatron/bookmarkvault/-/blob/master/sr
   "passphraseHash": "pbkdf2:Z7GnrZdSIQnuQokSQaVEAQ==:hwxlDGlGPwdc7jt1m+384dr3YK7JM8EFX1y3/lblqR4=",
   "data": "aes:yv5f7hFd2V0r51MyfcuO0Q==:EX4AWldZiwxBL2ZZONYZYwxAmA0Runl2pYXvH3l6m64wJrPiiM9oZp1F24njtBZ5A6TOk1iBhcIvyp2RsOSWoOMJ5oryjPG6fJfjxnzwr3atNRxUoQYOlU2cxaVlqSDgFc3oxSTz2beIyhCI5pCknL3vlEwdjpSIgKejlsNVo6+G6tKJKV2cbZ9IXy32bumfHBX6j/i6xHQpa7/NhxXbxA=="
 }
+
+## [poddit](https://vincenttunru.gitlab.io/poddit)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module](https://gitlab.com/vincenttunru/poddit/-/blob/master/src/store/storeBookmark.ts) writing to `/public/poddit.ttl`:
+
+```turtle
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix bookm: <http://www.w3.org/2002/01/bookmark#>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+
+<> terms:references <#0.716493818605209.ttl>.
+
+<#0.716493818605209.ttl>
+    a bookm:Bookmark;
+    terms:created "2023-12-13T10:11:12.842Z"^^XML:dateTime;
+    terms:title "alfa";
+    bookm:recalls "https://google.com".
+```
+
+and to `/settings/publicTypeIndex.ttl`:
+
+```turtle
+:poddit
+    a solid:TypeRegistration;
+    solid:forClass bookm:Bookmark;
+    solid:instance </public/poddit.ttl>.
+```
+
+## [Solid Bookmarks](https://bookmarks.pondersource.net)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module?](https://github.com/pondersource/solidBookmarker/blob/main/src/utils/index.ts) writing to `/bookmarks/index.ttl`:
+
+```turtle
+:c13dbe2e-a0fe-48d0-a7d7-22a87b86a1f4
+a bookm:Bookmark; dct:title "alfa"; bookm:recalls "https://www.google.com".
+```
+
+## [Booklice](https://scenaristeur.github.io/booklice/)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module](https://github.com/scenaristeur/booklice/blob/main/src/store/modules/solid.js) writing to `/public/bookmarks/`:
+
+```turtle
+<#1702557925503> a <https://www.w3.org/ns/activitystreams#Note>;
+    <https://www.w3.org/ns/activitystreams#name> "bravo";
+    <https://www.w3.org/ns/activitystreams#content> "";
+    <https://www.w3.org/ns/activitystreams#url> <https://www.google.com>;
+    <https://www.w3.org/ns/activitystreams#actor> <https://rosano.solidcommunity.net/profile/card#me>;
+    <https://www.w3.org/ns/activitystreams#published> "2023-12-14T12:45:25.503Z".
+```
+
+## [solid-rss](https://rrustom.github.io/solid-rss/)
+
+> [!NOTE]  
+> Requests root access
+
+Uses [custom module](https://github.com/RRustom/solid-rss/blob/main/src/helpers/addArticle.js) writing to `/$ID.ttl`:
+
+```turtle
+:17025573933468186660586698863
+    a schema:WebPage;
+    schema:name "Should you add screenshots to documentation?";
+    schema:url
+    "https://thisisimportant.net/posts/screenshots-in-documentation/".
+```
+
+and to `/settings/publicTypeIndex.ttl`:
+
+```turtle
+:17025569190558494973613527352
+    a solid:TypeRegistration;
+    solid:forClass schema:DataFeed;
+    solid:instance </503d4940-9a7c-11ee-8100-2bec63e97603.ttl>.
+    
+:170255691905621628230877571053
+    a solid:TypeRegistration;
+    solid:forClass schema:WebPage;
+    solid:instance </50425250-9a7c-11ee-8100-2bec63e97603.ttl>.
 ```
