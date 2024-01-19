@@ -57,6 +57,24 @@ See https://github.com/SolidOS/issue-pane
 
 See https://github.com/NoelDeMartin/solid-focus/blob/master/src/models/soukai/Task.ts
 
+Solid Focus gives tasks a UUID  inside lists, inside workspaces:
+https://me.solidcommunity.net/my-workspace/my-list/0892486a-04ce-46ca-8ee9-fabf9fdf2d76
+We don't know exactly how the app discovers existing workspaces/lists/tasks; at some point
+it seems to be crawling the whole pod, but we'll dig into this question, see
+https://github.com/pdsinterop/conventions/issues/26.
+
+While the workspace/list/task hierarchy is represented by the folder structure on the pod, the 
+rest of the data about a task is stored in the tasks's RDF document using the following model:
+```
+<https://me.solidcommunity.net/my-workspace/my-list/0892486a-04ce-46ca-8ee9-fabf9fdf2d76> <http://www.w3.org/2000/01/rdf-schema#label> "do something" .
+<https://me.solidcommunity.net/my-workspace/my-list/0892486a-04ce-46ca-8ee9-fabf9fdf2d76> <http://purl.org/dc/terms/created> "2024-01-19T08:39:35Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://me.solidcommunity.net/my-workspace/my-list/0892486a-04ce-46ca-8ee9-fabf9fdf2d76> <http://purl.org/dc/terms/modified> "2024-01-19T08:39:35Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://me.solidcommunity.net/my-workspace/my-list/0892486a-04ce-46ca-8ee9-fabf9fdf2d76> a <http://purl.org/vocab/lifecycle/schema#Task> .
+<https://me.solidcommunity.net/my-workspace/my-list/0892486a-04ce-46ca-8ee9-fabf9fdf2d76> a <http://www.w3.org/ns/ldp#Resource> .
+```
+
+TODO: document if Solid-Focus supports status tracking and/or commenting, or only create/delete.
+
 ## Projectron
 
 See https://github.com/hackers4peace/projectron
