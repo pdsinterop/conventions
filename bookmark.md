@@ -5,18 +5,18 @@ There are several formats for bookmarks. All of them (so far) use `http://www.w3
 
 ### Link
 The link a bookmarks points to can be stored in a number of ways:
-* `<bookmark> <http://www.w3.org/2002/01/bookmark#recalls> <http://example.com>`
+* `<bookmark> <http://www.w3.org/2002/01/bookmark#recalls> <http://example.com>` (preferred)
 * `<bookmark> <http://www.w3.org/2002/01/bookmark#recalls> "http://example.com"`
 
 ### Label
 The label of the bookmark can also be stored in a number of ways:
-* `<bookmark> <http://www.w3.org/2000/01/rdf-schema#label> "Example Website"`
+* `<bookmark> <http://www.w3.org/2000/01/rdf-schema#label> "Example Website"` (preferred)
 * `<bookmark> <http://purl.org/dc/terms/title#title> "Example Website"`
 
 ### Topic (optional)
 Apart from each having their own label, bookmarks can be organised by topic. There are a number of ways to store those:
 * `<bookmark> <http://www.w3.org/2002/01/bookmark#hasTopic> "Birds"` ([Reza Soltani's Bookmarks app](https://github.com/soltanireza65/soukai-solid-app) use this)
-* `<bookmark> <http://www.w3.org/2002/01/bookmark#hasTopic> <https://YOU.example.org/birds.ttl#Birds>`
+* `<bookmark> <http://www.w3.org/2002/01/bookmark#hasTopic> <https://YOU.example.org/birds.ttl#Birds>` (preferred)
 
 In the latter case, the topic would be a `bookmark#Topic`, see [Jeff Zucker's docs about this](https://github.com/jeff-zucker/linked-bookmarks/blob/4fe5331084c8230a9d8477ad3388316151c6891d/README.md?plain=1#L10-L18):
 ```
@@ -30,6 +30,27 @@ In the latter case, the topic would be a `bookmark#Topic`, see [Jeff Zucker's do
 ```
 ### Created (optional)
 * `<bookmark> <http://purl.org/dc/terms/created> "2023-11-21T14:16:16Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .`
+* Soukai stores created_at and updated_at on a separate metadata object, as follows:
+```
+@prefix : <#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix bookm: <./>.
+@prefix boo: <http://www.w3.org/2002/01/bookmark#>.
+@prefix crdt: <https://vocab.noeldemartin.com/crdt/>.
+
+bookm:b93d9944-d54d-42f6-a39b-6ea3f9217763
+    a boo:Bookmark;
+    rdfs:label "sdf";
+    boo:hasTopic "sdfg";o
+    boo:id "b93d9944-d54d-42f6-a39b-6ea3f9217763";
+    boo:recalls <http://example.com>.
+bookm:b93d9944-d54d-42f6-a39b-6ea3f9217763-metadata
+    a crdt:Metadata;
+    crdt:createdAt "2023-11-21T12:50:32.051Z"^^xsd:dateTime;
+    crdt:resource bookm:b93d9944-d54d-42f6-a39b-6ea3f9217763;
+    crdt:updatedAt "2023-11-21T12:50:32.051Z"^^xsd:dateTime.
+```
 
 ### Creator (optional)
 There are two ways to link to the creator of a bookmark:
