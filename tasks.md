@@ -1,4 +1,5 @@
 # Tasks
+Task tracking, todo lists, issue tracking, project management, etc
 
 ## [0data Hello World](https://hello.0data.app/solid/)
 
@@ -47,3 +48,23 @@ Uses [custom module](https://github.com/karlb/doagain/blob/master/remotestorage-
   "@context": "http://remotestorage.io/spec/modules/doagain/doagain-store"
 }
 ```
+
+## Solid OS
+
+See https://github.com/SolidOS/issue-pane
+
+## Solid-Focus
+
+See https://github.com/NoelDeMartin/solid-focus/blob/master/src/models/soukai/Task.ts
+
+## Projectron
+
+See https://github.com/hackers4peace/projectron
+
+## Solid Data Module
+
+See https://github.com/solid-contrib/data-modules/tree/main/tasks (under construction)
+
+## Other
+
+For data formats used outside Solid, see also https://github.com/federatedbookkeeping/task-tracking (under development)
