@@ -43,7 +43,7 @@ nav:
 aux_links:
   "PDS Interop on GitHub":
     - https://github.com/pdsinterop
-footer_content: '<p xmlns:dct="http://purl.org/dc/terms/" property="dct:rights">This project is [funded](https://nlnet.nl/project/SolidDataModules/) by <img src="https://nlnet.nl/logo/banner.svg" style="width: 5%; margin: 0 1% 0 1%;">
+footer_content: '<p xmlns:dct="http://purl.org/dc/terms/" property="dct:rights">This project is <a href="https://nlnet.nl/project/SolidDataModules/">funded</a> by <img src="https://nlnet.nl/logo/banner.svg" style="width: 5%; margin: 0 1% 0 1%;">
 / <img src="https://nlnet.nl/image/logos/NGI0Entrust_tag.svg" style="width: 5%; margin: 0 1% 0 1%;">Copyright © <span property="dct:dateCopyrighted">2020-present</span> <span property="dct:publisher">PDS Interop</span>. Distributed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons (CC BY 4.0).</a></p>'
 gh_edit_link: true
 gh_edit_repository: https://github.com/pdsinterop/conventions/
