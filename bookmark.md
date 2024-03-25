@@ -33,7 +33,7 @@ In the latter case, the topic would be a `bookmark#Topic`, see [Jeff Zucker's do
 * `<bookmark> <http://purl.org/dc/terms/created> "2023-11-21T14:16:16Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .`
 * Soukai stores created_at and updated_at on a separate metadata object, as follows:
 
-```
+```turtle
 @prefix : <#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
