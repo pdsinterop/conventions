@@ -53,6 +53,54 @@ Uses [custom module](https://github.com/karlb/doagain/blob/master/remotestorage-
 
 See https://github.com/SolidOS/issue-pane
 
+When you create an issue tracker, it creates a folder on your pod, with an index.ttl and a state.ttl file in there, for instance:
+
+* https://michielbdejong.solidcommunity.net/shops/Tracker/id1718099958673/index.ttl
+```turtle
+@prefix : <#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix c: </profile/card#>.
+
+:this
+    a wf:Tracker;
+    dc:author c:me;
+    dc:created
+    "2024-06-11T09:59:31Z"^^xsd:dateTime, "2024-06-11T09:59:32Z"^^xsd:dateTime;
+    wf:assigneeClass foaf:Person;
+    wf:initialState wf:Open;
+    wf:issueClass wf:Task;
+    wf:stateStore <state.ttl>.
+```
+* https://michielbdejong.solidcommunity.net/shops/Tracker/id1718099958673/state.ttl
+```
+@prefix : <#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sioc: <http://rdfs.org/sioc/ns#>.
+@prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ind: <index.ttl#>.
+@prefix c: </profile/card#>.
+
+ind:this wf:stateStore <>.
+
+:Iss1718100013562
+    a wf:Open;
+    dc:title "get coffee";
+    dct:created "2024-06-11T10:00:13Z"^^xsd:dateTime;
+    wf:description "description\n";
+    wf:message :Msg1718100029761;
+    wf:tracker ind:this.
+:Msg1718100029761
+    dct:created "2024-06-11T10:00:29Z"^^xsd:dateTime;
+    sioc:content "comment";
+    foaf:maker c:me.
+```
+
 ## Solid-Focus
 
 See https://github.com/NoelDeMartin/solid-focus/blob/master/src/models/soukai/Task.ts
