@@ -56,6 +56,7 @@ See https://github.com/SolidOS/issue-pane
 When you create an issue tracker, it creates a folder on your pod, with an index.ttl and a state.ttl file in there, for instance:
 
 * https://michielbdejong.solidcommunity.net/shops/Tracker/id1718099958673/index.ttl
+
 ```turtle
 @prefix : <#>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -74,7 +75,9 @@ When you create an issue tracker, it creates a folder on your pod, with an index
     wf:issueClass wf:Task;
     wf:stateStore <state.ttl>.
 ```
+
 * https://michielbdejong.solidcommunity.net/shops/Tracker/id1718099958673/state.ttl
+
 ```turtle
 @prefix : <#>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
