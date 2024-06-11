@@ -75,7 +75,7 @@ When you create an issue tracker, it creates a folder on your pod, with an index
     wf:stateStore <state.ttl>.
 ```
 * https://michielbdejong.solidcommunity.net/shops/Tracker/id1718099958673/state.ttl
-```
+```turtle
 @prefix : <#>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix dct: <http://purl.org/dc/terms/>.
