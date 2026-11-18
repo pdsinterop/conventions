@@ -1,86 +1,53 @@
 # Notepad
-_NB: this currently mainly describes how Solid OS stores data on a Solid Pod._
 
-To create a new notepad at `/notepad.ttl`, add the following triples into it:
+## SolidOS shared notepad
 
-```turtle
-</notepad.ttl#this> a          pim:Notepad .
-</notepad.ttl#this> dc:author  </profile/card#me> .
-</notepad.ttl#this> dc:created "2019-04-17T08:05:19Z"^^XML:dateTime .
-</notepad.ttl#this> dc:title   "Shared Notes" .
-```
+Checked against [solid-panes 5.1.0 padPane](https://github.com/SolidOS/solid-panes/blob/617cc9d2e1579554c43d51cecf7b3e8f0d466e82/src/pad/padPane.ts), specifically `label` and `mintNew`. The notepad namespace is **http://www.w3.org/ns/pim/pad#**, distinct from the storage-space namespace used by `pim:` in the [overview](./overview.md). Here we use `pad:`.
 
-Now to indicate that his notepad is empty, add an empty first line to it:
+The standard mint path creates `index.ttl#this`, with title "Shared Notes", creation timestamp, author and one empty line. The older spawn path in the same source uses `pad.ttl#thisPad`; do not hard-code one filename or fragment when recognising notepads.
 
 ```turtle
-</notepad.ttl#this>  pim:next   </notepad.ttl#this_line0> .
-</notepad.ttl#line0> dc:author  </profile/card#me> .
-</notepad.ttl#line0> dc:content "" .
+@prefix pad: <http://www.w3.org/ns/pim/pad#> .
+
+</notes/index.ttl#this>
+    a pad:Notepad ;
+    dc:title "Shared Notes" ;
+    dc:created "2026-11-18T09:00:00Z"^^xsd:dateTime ;
+    dc:author </profile/card#me> ;
+    pad:next </notes/index.ttl#this_line0> .
+</notes/index.ttl#this_line0>
+    dc:author </profile/card#me> ;
+    sioc:content "" ;
+    pad:next </notes/index.ttl#this> .
 ```
 
-Now indicate that this is the last line, set this line's `pim:next` to the notepad itself:
+The line content predicate is `sioc:content`, not `dc:content`. The head's `pad:next` points to the exact first line IRI, and the last line points back to the notepad. This circular linked structure is different from an RDF collection (`rdf:first` / `rdf:rest`), which meetings use for tool order.
+
+A two-line example is:
 
 ```turtle
-</notepad.ttl#line0> pim:next </notepad.ttl#this> .
+@prefix pad: <http://www.w3.org/ns/pim/pad#> .
+
+</notes/index.ttl#this>
+    a pad:Notepad ;
+    pad:next </notes/index.ttl#this_line0> .
+</notes/index.ttl#this_line0>
+    dc:author </profile/card#me> ;
+    sioc:content "Alfa" ;
+    pad:next </notes/index.ttl#line1> .
+</notes/index.ttl#line1>
+    dc:author </profile/card#me> ;
+    sioc:content "Bravo" ;
+    pad:next </notes/index.ttl#this> .
 ```
 
-To add a line to the notepad, for instance 'Alfa', first update the content of the first line, by replacing
+Replace existing next/content triples when editing; adding another successor without removing the old one makes order ambiguous. Readers should detect broken links and unexpected cycles rather than loop indefinitely. These are structural requirements for traversing the documented shape, not proof of the editor's concurrency behaviour.
 
-```turtle
-</notepad.ttl#line0> dc:content "" .
-```
+Participation records are managed by the shared `solid-ui` pad implementation; they are not written by this pane's `mintNew`. Participation, live editing and concurrent updates still need a separate source/round-trip review. Do not conflate a participation record with an editable text line.
 
-with
+## Other note applications (historical observations)
 
-```turtle
-</notepad.ttl#line0> dc:content "Alfa" .
-```
-
-and then add a new participation line below it, where the user can type their next line; pick a timestamp, for instance `1555488949899`, and add the following triples:
-
-```turtle
-</notepad.ttl#this>            flow:participation </notepad.ttl#id1555488949899> .
-</notepad.ttl#id1555488949899> flow:participant   </profile/card#me> .
-</notepad.ttl#id1555488949899> ical:dtstart       "2019-04-17T08:05:22Z"^^XML:dateTime .
-</notepad.ttl#id1555488949899> ui:backgroundColor "#c0d2fe" .
-```
-
-Note that the first line still is the only line in the document, apart from the participation line. To add a second line, start making proper use of the `pim:next` attribute, by linking the first line to the second line, and then linking the second line back up to the notepad as a whole. The participation line stays as it is. The result will then look like this:
-
-## Main notepad
-
-```turtle
-</notepad.ttl#this> a                  pim:Notepad .
-</notepad.ttl#this> dc:author          </profile/card#me> .
-</notepad.ttl#this> dc:created         "2019-04-17T08:05:19Z"^^XML:dateTime .
-</notepad.ttl#this> dc:title           "Shared Notes" .
-</notepad.ttl#this> pim:next           </notepad.ttl#this_line0> .
-</notepad.ttl#this> flow:participation :id1555488949899 .
-```
-
-## Participation
-
-```turtle
-</notepad.ttl#id1555488949899> flow:participant   </profile/card#me> .
-</notepad.ttl#id1555488949899> ical:dtstart       "2019-04-17T08:05:22Z"^^XML:dateTime .
-</notepad.ttl#id1555488949899> ui:backgroundColor "#c0d2fe" .
-```
-
-## First line
-
-```turtle
-</notepad.ttl#line0> dc:author  </profile/card#me> .
-</notepad.ttl#line0> dc:content "Alfa" .
-</notepad.ttl#line0> pim:next   :id1555489499814  .
-```
-
-## Second line
-
-```turtle
-</notepad.ttl#id1555489499814> dc:author  </profile/card#me> .
-</notepad.ttl#id1555489499814> dc:content "Bravo" .
-</notepad.ttl#id1555489499814> pim:next   </notepad.ttl#this> .
-```
+The following app-specific descriptions have not been revalidated in this audit. Their JSON formats are not automatically equivalent to the SolidOS linked-line model.
 
 # [Litewrite](https://litewrite.net)
 
