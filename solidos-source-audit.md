@@ -27,3 +27,7 @@ Next validation should load fixtures through the appropriate Solid Data Modules,
 ## Backend convergence
 
 Keep the logical model separate from Solid RDF serialization, discovery and access control. Document a remoteStorage JSON representation only after checking the corresponding module's actual schema and round-trip behaviour. Do not infer equivalent models merely from matching app categories. Record missing fields and lossy mappings before proposing a shared backend-independent component.
+
+## Application format review
+
+[Movies](./movies.md) now documents Media Kraken's type-index discovery, Movie/WatchAction relationship, field term kinds, per-movie document boundaries, legacy migration and the read-only shared module's limits. Its Turtle example is included in the reviewed-example syntax and relationship checks. Runtime browser verification remains separate.
