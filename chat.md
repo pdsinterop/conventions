@@ -1,60 +1,39 @@
 # Chat
-_NB1: this currently mainly describes how Solid OS stores data on a Solid Pod._
 
-_NB2: See the [client-client spec for chat](https://solid.github.io/chat/) which is more complete and more recent than this doc!_
+SolidOS has two distinct channel classes. Checked against [chat-pane 4.1.0 shortChatPane](https://github.com/SolidOS/chat-pane/blob/4a245abf680a16272cbc8afb07f4b50548ad20e1/src/shortChatPane.ts) and [longChatPane](https://github.com/SolidOS/chat-pane/blob/4a245abf680a16272cbc8afb07f4b50548ad20e1/src/longChatPane.ts). See also the [client-client chat specification](https://solid.github.io/chat/). Implementation observations here are not a claim that every chat app follows that specification.
 
-# Old convention description from before the [client-client spec for chat](https://solid.github.io/chat/) follows
+## ShortChat (deprecated creation)
 
-## ShortChat
-To create a ShortChat conversation, create a document, e.g., `/chat.ttl`, and add the following triples to it:
+The short-chat pane recognises `mee:Chat`, not `mee:LongChat`. Its default new instance is `index.ttl#this`; callers may supply another IRI. Creating short chats is deprecated and prompts for confirmation, while viewing existing short chats and embedded comments remains supported.
 
-```turtle
-</chat.ttl#this> a          mee:LongChat .
-</chat.ttl#this> dc:author  </profile/card#me> .
-</chat.ttl#this> dc:created "2018-07-06T21:36:04Z"^^XML:dateTime .
-</chat.ttl#this> dc:title   "Chat channel" .
-```
-
-To add a message in the chat conversation, for instance where you say "hi", generate a timestamp like `1555487418787` and add the following triples to `/chat.ttl`:
+Using the [overview prefixes](./overview.md):
 
 ```turtle
-</chat.ttl#Msg1555487418787> dct:created  "2019-04-17T07:50:18Z"^^XML:dateTime .
-</chat.ttl#Msg1555487418787> sioc:content "hi" .
-</chat.ttl#Msg1555487418787> foaf:maker   </profile/card#me> .
+</chat/index.ttl#this> a mee:Chat ;
+    dc:title "Chat" ;
+    dc:created "2026-11-18T09:00:00Z"^^xsd:dateTime ;
+    dc:author </profile/card#me> .
 ```
 
-Note that for historical reasons, for the chat conversation as a whole, we use `dc:created` and `dc:author`, whereas for the individual chat messages we use `dct:created` and `foaf:maker`.
-
-### Long Chat
-
-LongChat is similar to ShortChat, except that it uses LDP containers to discover the triples that describe the chat conversation,
-instead of having all the triples in one `chat.ttl` doc.
-To create a chat conversation, pick a timestamp, e.g., `1555491215455`, create an LDP container, for instance `/long-chat/`, and in there, create an index document, e.g., `/long-chat/index.ttl`. To the index document, add the following triples:
+The channel metadata uses `dc:created` and `dc:author`. The message shape uses `dct:created`, `foaf:maker` and `sioc:content`. Include the `flow:message` link: the pane counts those links and uses them to locate a message document. Merely placing an unlinked message in a document is insufficient for that path.
 
 ```turtle
-</long-chat/index.ttl#this>            a                    mee:LongChat .
-</long-chat/index.ttl#this>            dc:author            </profile/card#me> .
-</long-chat/index.ttl#this>            dc:created           "2018-07-06T21:36:04Z"^^XML:dateTime .
-</long-chat/index.ttl#this>            dc:title             "Chat channel" .
-</long-chat/index.ttl#this>            flow:participation   :id1555491215455 .
-</long-chat/index.ttl#this>            ui:sharedPreferences :SharedPreferences .
-</long-chat/index.ttl#id1555491215455> ic:dtstart           "2019-04-17T08:53:35Z"^^XML:dateTime .
-</long-chat/index.ttl#id1555491215455> flow:participant     </profile/card#me> .
-</long-chat/index.ttl#id1555491215455> ui:backgroundColor   "#c0d2fe" .
+</chat/index.ttl#this> flow:message </chat/index.ttl#Msg1> .
+</chat/index.ttl#Msg1>
+    dct:created "2026-11-18T09:01:00Z"^^xsd:dateTime ;
+    sioc:content "hi" ;
+    foaf:maker </profile/card#me> .
 ```
 
-To add a message in the LongChat conversation, for instance where you say "hi", pick a filename, for instance, `/long-chat/2019/04/17/chat.ttl`, generate a timestamp like `1555487418787` and add the following triples to `/long-chat/2019/04/17/chat.ttl`:
+## LongChat
 
-```turtle
-</long-chat/2019/04/17/chat.ttl#Msg1555487418787> dct:created  "2019-04-17T07:50:18Z"^^XML:dateTime .
-</long-chat/2019/04/17/chat.ttl#Msg1555487418787> sioc:content "hi" .
-</long-chat/2019/04/17/chat.ttl#Msg1555487418787> foaf:maker   </profile/card#me> .
-</long-chat/index.ttl#this>                       flow:message </long-chat/2019/04/17/chat.ttl#Msg1555487418787> .
-```
+The long-chat pane mints `mee:LongChat`, a title, creation timestamp and author when available. Its shared UI manages messages and participation. Do not require participation or shared-preference records as part of the minimal mint-time shape.
 
-Note that there is no need to make `/long-chat/2019/04/17/chat.ttl` discoverable from `/long-chat/index.ttl`, since it can be discovered by following the LDP Container member listings for `/long-chat/`, `/long-chat/2019/`, `/long-chat/2019/04/`, and `/2019/04/17/`.
+The dated daily message layout and container traversal described by the chat specification must be reviewed separately from channel creation. This audit has checked the pane entry point, not the shared UI's complete write and discovery paths; those details remain pending in the [audit](./solidos-source-audit.md).
 
-Also note that here too, for the chat conversation as a whole, we use `dc:created` and `dc:author`, whereas for the individual chat messages we use `dct:created` and `foaf:maker`.
+## Historical descriptions (not revalidated)
+
+The following material describes other apps and older observations. It is retained for compatibility research, not presented as a current SolidOS requirement.
 
 ## One-to-One Chat
 

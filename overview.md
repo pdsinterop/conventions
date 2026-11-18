@@ -6,6 +6,12 @@ As most Solid pods will have at least some data on them that was edited through 
 these conventions are a good place to start when you develop third-party apps. In the future, we'll
 see how this document can grow into a bigger participatory wiki of data shape conventions for Solid.
 
+## Implementation status
+
+These pages describe application conventions, not a universal Solid data schema. A resource's class, predicates, document boundaries and discovery mechanism must be checked together. Do not assume every pane writes its own distinct format or that every app uses these conventions.
+
+See the [SolidOS source audit](./solidos-source-audit.md) for versioned implementation references, verified corrections and remaining gaps. Examples use the prefixes below; prefix names are shorthand, while the expanded namespace IRIs determine meaning.
+
 For short-hand, we will use the following namespace prefixes here:
 
 ```turtle
@@ -19,8 +25,9 @@ For short-hand, we will use the following namespace prefixes here:
 @prefix    ldp: <http://www.w3.org/ns/ldp#> .
 @prefix    mee: <http://www.w3.org/ns/pim/meeting#> .
 @prefix    pim: <http://www.w3.org/ns/pim/space#> .
-@prefix     qu: <http://www.w3.org/2000/10/swap/pim/qif#>
-@prefix    rdf: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix     qu: <http://www.w3.org/2000/10/swap/pim/qif#> .
+@prefix    rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix   rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix   sioc: <http://rdfs.org/sioc/ns#> .
 @prefix  solid: <http://www.w3.org/ns/solid/terms#> .
@@ -40,13 +47,13 @@ A 'Dokieli Document' is an HTML document with some linked-data annotations, but 
 
 ## Folder
 
-When you add a 'Folder' tool, the databrowser creates a new LDP container. As an example, here are the triples that describe an LDP container `/foo/` with subcontainer `/foo/sub/` and member document `/foo/bar.ttl`:
+When you add a 'Folder' tool, the databrowser creates a new LDP container. The server supplies container membership; clients should not treat server-specific timestamps, sizes or extra types as required application fields. As an example, here are the triples that describe an LDP container `/foo/` with subcontainer `/foo/sub/` and member document `/foo/bar.ttl`:
 
 ```turtle
 </foo/> a            ldp:BasicContainer .
 </foo/> a            ldp:Container .
 </foo/> a            ldp:Resource .
-</foo/> dct:modified "2019-04-17T08:42:16Z"^^XML:dateTime .
+</foo/> dct:modified "2019-04-17T08:42:16Z"^^xsd:dateTime .
 </foo/> stat:mtime   1555490536.16 .
 </foo/> stat:size    4096 .
 </foo/> ldp:contains </foo/sub/> .

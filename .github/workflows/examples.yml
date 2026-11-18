@@ -1,0 +1,17 @@
+name: Reviewed RDF examples
+on:
+  pull_request:
+  push:
+    branches: [solidos-source-audit]
+permissions:
+  contents: read
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
